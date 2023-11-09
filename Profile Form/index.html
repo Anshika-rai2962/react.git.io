@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--<div class="container">
+        <div class="Simple-form">
+            <h2>Registration Form</h2>
+            <div class="form-container">
+                <form action="https://script.google.com/macros/s/AKfycbwfNEXrYbOSsD2bXDJBkL67NEhmnA7_VJOyM5YJyBughWpV1bl5uQHubxfb8Op2cJEp/exec" method="POST" name="contact-form">
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label for="box1">First Name<span>*</span></label>
+                            <input type="text" id="box1" required onclick="updateLastName()">
+                        </div>
+
+                        <div class="input-field">
+                            <label for="box2">Last Name<span>*</span></label>
+                            <input type="text" id="box2" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email<span>*</span></label>
+                            <input type="email" required>
+                         </div>
+
+                        <div class="input-field">
+                            <label>Phone Number<span>*</span></label>
+                            <input type="text" required>
+                        </div>
+
+                        
+                        <div class="input-field">
+                            <label>Age<span>*</span></label>
+                            <input type="text" required>
+                        </div>
+
+
+                        <div class="input-field">
+                            <label>Gender<span>*</span></label>
+                            <select name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field" id="add">
+                            <label>Address <span>*</span></label>
+                            <input type="text" required>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="btn">
+                        <button type="submit" class="normal">Save</button>
+                        <button type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>-->
+
+
+  <!--<form onsubmit="console.log('You clicked submit.'); return false">
+   <button type="submit">Submit</button>
+ </form>-->
+
+    <!--<script>
+
+
+function validateForm() {
+            
+            var errorElements = document.querySelectorAll('.error');
+            for (var i = 0; i < errorElements.length; i++) {
+                errorElements[i].textContent = '';
+            }
+    
+            var valid = true;
+    
+           
+            var firstName = document.getElementById("fname").value;
+            if (firstName.trim() === '') {
+                document.getElementById("fname-error").textContent = 'First Name is required';
+                valid = false;
+            }
+    
+    
+            return valid;
+        }
+
+
+
+     var firstName = document.getElementById('box1');
+     var lastName = document.getElementById('box2');
+
+     firstName.addEventListener('input', bbb);
+
+    function bbb() {
+        lastName.value = firstName.value;
+        // firstName.value = firstName.value.autofill();
+    }
+    </script>-->
+
+
+    <script>
+        const myVehicle = {
+          brand: 'Ford',
+          model: 'Mustang',
+          color: 'red'
+        }
+        
+        const updateMyVehicle = {
+          type: 'car',
+          year: 2021, 
+          color: 'yellow'
+        }
+        
+        const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+        
+        //Check the result object in the console:
+        console.log(myUpdatedVehicle);
+        </script>
+        
+        <p>Press F12 and see the result object in the console view.</p>
+        
+   
+
+
+
+</body>
+</html>

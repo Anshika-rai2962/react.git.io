@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="Simple-form">
+        <h2>Registration Form</h2>
+        <div class="form-container">
+            <form action="https://script.google.com/macros/s/AKfycbwfNEXrYbOSsD2bXDJBkL67NEhmnA7_VJOyM5YJyBughWpV1bl5uQHubxfb8Op2cJEp/exec" method="POST" name="contact-form" id="registration-form">
+
+                <div class="fields">
+
+                    <div class="input-field">
+                        <label>First Name<span>*</span></label>
+                        <input type="text" id="fname" required onclick="updateLastName()">
+                    </div>
+
+                    <div class="input-field">
+                        <label>Last Name<span>*</span></label>
+                        <input type="text" id="lname" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Email<span>*</span></label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Phone Number<span>*</span></label>
+                        <input type="text" id="phone" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Age<span>*</span></label>
+                        <input type="text" id="age" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Gender<span>*</span></label>
+                        <select name="gender" id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field" id="add">
+                        <label>Address <span>*</span></label>
+                        <input type="text" id="address" required>
+                    </div>
+                    
+                </div>
+
+                <div class="btn">
+                    <button type="submit" class="normal">Save</button>
+                    <button type="button">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+
+     function validateForm() {
+    
+        var errorElements = document.querySelectorAll('.error');
+        for (var i = 0; i < errorElements.length; i++) {
+            errorElements[i].textContent = '';
+        }
+
+        var valid = true;
+
+  
+        var firstName = document.getElementById("fname").value;
+        if (firstName.trim() === '') {
+            document.getElementById("fname-error").textContent = 'First Name is required';
+            valid = false;
+        }
+
+        return valid;
+    }
+
+    
+    document.getElementById("registration-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+       // variables 
+        var firstName = document.getElementById("fname").value;
+        var lastName = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var age = document.getElementById("age").value;
+        var gender = document.getElementById("gender").value;
+        var address = document.getElementById("address").value;
+
+        // show value in alert box
+        var message = "First Name: " + firstName + "\n" +
+                      "Last Name: " + lastName + "\n" +
+                      "Email: " + email + "\n" +
+                      "Phone: " + phone + "\n" +
+                      "Age: " + age + "\n" +
+                      "Gender: " + gender + "\n" +
+                      "Address: " + address;
+
+        alert(message);
+    });
+</script>
+</body>
+</html>
